@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
 
-const ai = new GoogleGenAI({apiKey:"AIzaSyAPl99A580n0jpSMWJrRgfEBleX9bjzYNc"});
+const ai = new GoogleGenAI({apiKey:"****************************"});
 
 async function main() {
   const response = await ai.models.generateContent({
