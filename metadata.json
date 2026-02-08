@@ -1,0 +1,8 @@
+
+{
+  "name": "DSA Master AI",
+  "description": "An advanced AI tutor specialized in Data Structures and Algorithms, providing code analysis, complexity evaluation, and interactive learning.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
