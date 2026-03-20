@@ -117,7 +117,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ initialTopic }) => {
         {/* Increased bottom padding (pb-60) to prevent message bar overlap */}
         <div className="max-w-3xl mx-auto px-4 pt-12 pb-60 space-y-12">
           {messages.map((msg) => (
-            <div key={msg.id} className={`flex gap-5 group animate-in fade-in slide-in-from-bottom-2 duration-400 ${msg.sender === Sender.USER ? 'flex-row-reverse' : ''}`}>
+            <div key={msg.id} className={`flex gap-5 group animate-in animate-slide-in-from-bottom ${msg.sender === Sender.USER ? 'flex-row-reverse' : ''}`}>
               {/* Avatar Icon */}
               <div className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-1 border shadow-sm ${
                 msg.sender === Sender.USER 
@@ -194,7 +194,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ initialTopic }) => {
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#212121] via-[#212121] to-transparent pt-12 pb-8 px-4 pointer-events-none">
         <div className="max-w-3xl mx-auto pointer-events-auto">
           {selectedImage && (
-            <div className="mb-4 animate-in slide-in-from-bottom-2">
+            <div className="mb-4 animate-in animate-slide-in-from-bottom">
               <div className="relative inline-block">
                 <img 
                   src={`data:${selectedImage.mimeType};base64,${selectedImage.data}`} 
